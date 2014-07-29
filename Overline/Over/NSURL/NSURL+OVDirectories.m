@@ -69,6 +69,19 @@
     return [[self URLForDocumentDirectory] URLByAppendingPathComponent:pathToAppend];
 }
 
+//---------------------------------------------------------------------
+
++ (NSURL *)URLForTemporaryDirectory
+{
+    return [NSURL fileURLWithPath:NSTemporaryDirectory()];
+}
+
+//---------------------------------------------------------------------
+
++ (NSURL *)URLForTemporaryDirectoryWithAppendedPath:(NSString *)pathToAppend
+{
+    return [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent:pathToAppend]];
+}
 @end
 
 

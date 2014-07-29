@@ -25,5 +25,10 @@
 /** Append a subfolder/file path onto the user's document directory */
 + (NSURL *)URLForDocumentDirectoryWithAppendedPath:(NSString *)pathToAppend;
 
+/** Uses NSTemporaryDirectory() to get a URL to a temp folder */
++ (NSURL *)URLForTemporaryDirectory;
+
+/** URL to a temporary subfolder and/or file */
++ (NSURL *)URLForTemporaryDirectoryWithAppendedPath:(NSString *)pathToAppend;
 
 @end
