@@ -108,4 +108,28 @@
 }
 
 
+/////////////////////////////////////////////////////////////////////////
+#pragma mark - Size
+/////////////////////////////////////////////////////////////////////////
+
++ (instancetype)constraintForFixedWidth:(CGFloat)width onItem:(id)item
+{
+    return [NSLayoutConstraint constraintWithItem:item attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:width];
+}
+
+//---------------------------------------------------------------------
+
++ (instancetype)constraintForFixedHeight:(CGFloat)height onItem:(id)item
+{
+    return [NSLayoutConstraint constraintWithItem:item attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:height];
+}
+
+//---------------------------------------------------------------------
+
++ (NSArray *)constraintsForFixedSize:(CGSize)size onItem:(id)item
+{
+    return @[[self constraintForFixedWidth:size.width onItem:item], [self constraintForFixedHeight:size.height onItem:item]];
+}
+
+
 @end

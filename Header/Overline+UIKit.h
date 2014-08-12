@@ -15,5 +15,7 @@
 #import "UIImage+OVGradients.h"
 #import "UIImage+OVTransforms.h"
 
+#import "UIImageView+Shorthand.h"
+
 #import "UIView+OVPositioning.h"
 #import "UIView+OVSnapshot.h"

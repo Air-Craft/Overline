@@ -48,6 +48,16 @@
 + (NSArray *)constraintsWithVerticalSpacing:(CGFloat)spacing betweenItems:(NSArray *)items;
 
 
+/////////////////////////////////////////////////////////////////////////
+#pragma mark - Size
+/////////////////////////////////////////////////////////////////////////
+
++ (instancetype)constraintForFixedWidth:(CGFloat)width onItem:(id)item;
+
++ (instancetype)constraintForFixedHeight:(CGFloat)height onItem:(id)item;
+
++ (NSArray *)constraintsForFixedSize:(CGSize)size onItem:(id)item;
+
 
 
 
