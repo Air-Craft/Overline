@@ -8,6 +8,9 @@
 #import <Foundation/Foundation.h>
 
 @interface NSString (OVJSON)
+
++ (instancetype)stringFromJSONObject:(id)jsonObject;
+
 - (id)JSON;
 - (id)jsonObject;
 @end

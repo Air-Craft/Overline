@@ -18,6 +18,8 @@
 #import "NSArray+OVInitialize.h"
 #import "NSArray+OVReverse.h"
 
+#import "NSFileManager+OVShorthand.h"
+
 #import "NSLayoutConstraint+OVConstructors.h"
 
 #import "NSMutableArray+OVShorthand.h"
