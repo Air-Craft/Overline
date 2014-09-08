@@ -11,6 +11,7 @@
 #import "UIColor+OVColorAdjust.h"
 #import "UIColor+OVRandom.h"
 
+#import "UIImage+OVData.h"
 #import "UIImage+OVDrawing.h"
 #import "UIImage+OVFilters.h"
 #import "UIImage+OVGradients.h"
