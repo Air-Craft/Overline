@@ -7,6 +7,8 @@
 //
 
 #import "UIImage+OVTransforms.h"
+#import "Overline+CoreGraphics.h"
+
 
 @implementation UIImage (OVTransforms)
 
