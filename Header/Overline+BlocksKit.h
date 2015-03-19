@@ -51,6 +51,7 @@
 #import "NSNumber+OVEquals.h"
 
 #import "NSObject+Equals.h"
+#import "NSObject+Runtime.h"
 
 #ifdef OV_USE_NATURAL_NULL
 #import "NSNull+Natural.h"

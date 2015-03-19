@@ -6,6 +6,35 @@
 
 #import "CGMath.h"
 
+/////////////////////////////////////////////////////////////////////////
+#pragma mark - CGPoint
+/////////////////////////////////////////////////////////////////////////
+
+CGPoint CGPointAdd(CGPoint A, CGPoint B)
+{
+    return CGPointMake(A.x + B.x, A.y + B.y);
+}
+
+CGPoint CGPointSubtract(CGPoint A, CGPoint B)
+{
+    return CGPointMake(A.x - B.x, A.y - B.y);
+}
+
+CGFloat CGPointDistance(CGPoint A, CGPoint B)
+{
+    return sqrt((A.x - B.x) * (A.x - B.x) + (A.y - B.y) * (A.y - B.y));
+}
+
+CGPoint CGPointLinearInterp(CGPoint A, CGPoint B, CGFloat fraction)
+{
+    CGPoint C = CGPointMake((B.x - A.x) * fraction + A.x,
+                            (B.y - A.y) * fraction + A.y);
+    return C;
+}
+
+/////////////////////////////////////////////////////////////////////////
+#pragma mark - CGSize
+/////////////////////////////////////////////////////////////////////////
 
 CGSize CGSizeScaledBy(CGSize s, CGFloat scale)
 {
@@ -36,7 +65,9 @@ CGSize CGSizeScaledToFit(CGSize s, CGSize target)
         return CGSizeScaledBy(s, target.height / s.height);
 }
 
-//---------------------------------------------------------------------
+/////////////////////////////////////////////////////////////////////////
+#pragma mark - CGRect
+/////////////////////////////////////////////////////////////////////////
 
 CGRect CGRectCenteredOnRect(CGRect r, CGRect target)
 {

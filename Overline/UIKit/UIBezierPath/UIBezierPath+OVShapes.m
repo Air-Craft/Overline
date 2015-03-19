@@ -11,6 +11,16 @@
 
 @implementation UIBezierPath (OVShapes)
 
++ (instancetype)bezierPathLineFromPoint:(CGPoint)fromPoint toPoint:(CGPoint)toPoint
+{
+    UIBezierPath *path = [self bezierPath];
+    [path moveToPoint:fromPoint];
+    [path addLineToPoint:toPoint];
+    return path;
+}
+
+//---------------------------------------------------------------------
+
 + (instancetype)bezierPathEquilaterialTriangleWithSideLength:(CGFloat)sideLength rotation:(CGFloat)rotation
 {
     // Let's get the points based on having it centered (for the rotation)

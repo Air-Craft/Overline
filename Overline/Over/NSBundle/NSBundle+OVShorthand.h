@@ -9,4 +9,9 @@
 
 @interface NSBundle (OVShorthand)
 - (id)JSONForResourceName:(NSString *)resourceName;
+
+- (NSString *)version;
+- (NSString *)shortVersion;
+- (NSString *)displayName;
+
 @end

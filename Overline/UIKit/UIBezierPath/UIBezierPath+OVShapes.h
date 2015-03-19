@@ -10,6 +10,8 @@
 
 @interface UIBezierPath (OVShapes)
 
++ (instancetype)bezierPathLineFromPoint:(CGPoint)fromPoint toPoint:(CGPoint)toPoint;
+
 + (instancetype)bezierPathEquilaterialTriangleWithSideLength:(CGFloat)sideLength rotation:(CGFloat)rotation;
 
 @end

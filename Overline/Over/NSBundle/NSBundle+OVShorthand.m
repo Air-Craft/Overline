@@ -12,4 +12,26 @@
     NSData *jsonData = [NSData dataWithContentsOfFile:[self pathForResource:resourceName ofType:@"json"]];
     return [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:NULL];
 }
+
+//---------------------------------------------------------------------
+
+- (NSString *)displayName
+{
+    return self.infoDictionary[@"CFBundleDisplayName"];
+}
+
+//---------------------------------------------------------------------
+
+- (NSString *)version
+{
+    return self.infoDictionary[@"CFBundleVersion"];
+}
+
+//---------------------------------------------------------------------
+
+- (NSString *)shortVersion
+{
+    return self.infoDictionary[@"CFBundleShortVersionString"];
+}
+
 @end
