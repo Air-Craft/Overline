@@ -13,7 +13,7 @@
 
 + (instancetype)_arrayWithRangeFrom:(NSInteger)from to:(NSInteger)to step:(NSUInteger)step reverse:(BOOL)reverse {
     NSMutableArray *array = [NSMutableArray array];
-    for (NSInteger i = from; i < to; i += step) {
+    for (NSInteger i = from; i <= to; i += step) {
         [array addObject:[NSNumber numberWithInteger:i]];
     }
 
