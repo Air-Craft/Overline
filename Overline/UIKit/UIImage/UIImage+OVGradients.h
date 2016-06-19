@@ -24,5 +24,7 @@
 /** Convenience method for a gradient along the horizontal axis with locations 0,1 pinned to the top/bottom edges */
 + (UIImage *)verticalGradientImageWithSize:(CGSize)size colors:(NSDictionary *)locationsColorsDict;
 
+/** Create an image with the given size and CoreGraphics drawing code executed from the block argument */
++ (UIImage *)imageWithSize:(CGSize)size drawing:(void(^)(CGContextRef ctx))drawingBlack;
 
 @end

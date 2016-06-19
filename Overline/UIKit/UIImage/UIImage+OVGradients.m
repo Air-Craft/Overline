@@ -62,4 +62,19 @@
     return [self gradientImageWithSize:size colors:locationsColorsDict startPoint:CGPointMake(0, 0) endPoint:CGPointMake(0, size.height)];
 }
 
+//---------------------------------------------------------------------
+
++ (UIImage *)imageWithSize:(CGSize)size drawing:(void (^)(CGContextRef))drawingBlack
+{
+    UIImage *resultImg;
+    UIGraphicsBeginImageContextWithOptions(size, NO, 0.0);
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    
+    drawingBlack(ctx);
+    
+    resultImg = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return resultImg;
+}
+
 @end
